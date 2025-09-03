@@ -5,6 +5,7 @@ import org.example.service_one.service.KafkaProducer;
 import org.example.service_one.service.ServiceOneTwo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ public class ServiceOneController {
         this.kafkaProducer = kafkaProducer;
     }
 
-    @PostMapping("/First_Name")
+    @GetMapping("/First_Name")
     public ResponseEntity<ResponseDao>  getFirstName(){
 //        RestTemplate restTemplate = new RestTemplate();
 //        ResponseEntity<ResponseTwoDao> response = restTemplate.postForEntity(
